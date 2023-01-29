@@ -1,0 +1,490 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOLSTACK</title>
+    <link  href="{% static 'pdftools/style.css' %}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="static/pdftools/style.css"> -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <h2><a href="#" class="branding-logo">TOOLSTACK</a></h2>
+            </div>
+            <label for="input-hamburger" class="hamburger"></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="#" class="menu-link">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">Convert To PDF
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">JPG to PDF</a></li>
+                        <li><a href="#" class="menu-link">Word to PDF</a></li>
+                        <li><a href="#" class="menu-link">PPT to PDF</a></li>
+                        <li><a href="#" class="menu-link">Excel to PDF</a></li>
+                        <li><a href="#" class="menu-link">HTML to PDF</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">Convert From PDF
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">PDF to JPG</a></li>
+                        <li><a href="#" class="menu-link">PDF to Word</a></li>
+                        <li><a href="#" class="menu-link">PDF to PPT</a></li>
+                        <li><a href="#" class="menu-link">PDF to Excel</a></li>
+                        <li><a href="#" class="menu-link">PDF to PDF/A</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">Edit PDF
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">Rotate PDF</a></li>
+                        <li><a href="#" class="menu-link">Add Page Numbers</a></li>
+                        <li><a href="#" class="menu-link">Watermark</a></li>
+                        <li><a href="#" class="menu-link">Edit PDF</a></li>
+                        <li><a href="#" class="menu-link">Remove Pages</a></li>
+                        <li><a href="#" class="menu-link">Merge PDF</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">PDF Tools
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">Compress PDF</a></li>
+                        <li><a href="#" class="menu-link">Repair PDF</a></li>
+                        <li><a href="#" class="menu-link">Split PDF</a></li>
+                        <li><a href="#" class="menu-link">Extract PDF</a></li>
+                        <li><a href="#" class="menu-link">Organize PDF</a></li>
+                        <li><a href="#" class="menu-link">PDF Security</a></li>
+                    </ul>
+                </li>
+                <!--<li><a href="#" class="menu-link">Login/Signup</a></li>-->
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">Login/Signup
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">Login</a></li>
+                        <li><a href="#" class="menu-link">Signup</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">More
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu" id="navmore">
+                        <li><a href="#" class="menu-link">About US</a></li>
+                        <li><a href="#" class="menu-link">Contact Us</a></li>
+                        <li><a href="#" class="menu-link">Apps</a></li>
+                        <li><a href="#" class="menu-link">Pricing</a></li>
+                        <li><a href="#" class="menu-link">Help</a></li>
+                    </ul>
+                </li>
+
+                <!--<li><a href="#" class="menu-link">More</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <!--<div class="mainbody">
+        <div id="homebody" class="homebody">
+            <button class="uploadbutton">Choose Files</button>
+        </div>
+    </div>-->
+    <div class="uploadbody">
+        <div class="convertsection">
+            <div class="convertbox">
+                <div class="uploadbtn">
+
+                    <div class="drag-area">
+                        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <header> Drag & Drop to Upload File</header>
+                        <span>OR</span>
+                        <button>Browse Files(s)</button>
+                        <input type="file" hidden>
+                    </div>
+
+                        <!-- <button class="uploadbutton">Choose Files(s)</button> -->
+                </div>
+                <!--<div class="conver-to-btn">
+                    <button class="convert-to" type="button" data-toggle="convert-to">Convert To 
+                        <span class="caret"></span>
+                    </button>
+                    <div class="convert-to-list">
+                            <a href="#"> Convert To PDF</a>
+                            <a href="#"> Convert To WORD</a>
+                            <a href="#"> Convert To JPEG</a>
+                            <a href="#"> Convert To HTML</a>
+                            <a href="#"> Compress PDF</a>
+                            <a href="#"> Merge PDF</a>
+                            <a href="#"> Organize PDF</a>
+                            <a href="#"> Rotate PDF</a>
+                            <a href="#"> Protect PDF</a>
+                    </div>
+                </div>-->
+                <!--<div class="dropdown">
+                    <button class="dropbtn">Convert To</button>
+                    <div class="dropdown-content">
+                        <a href="#"> Convert To PDF</a>
+                        <a href="#"> Convert To WORD</a>
+                        <a href="#"> Convert To JPEG</a>
+                        <a href="#"> Convert To HTML</a>
+                        <a href="#"> Compress PDF</a>
+                        <a href="#"> Merge PDF</a>
+                        <a href="#"> Organize PDF</a>
+                        <a href="#"> Rotate PDF</a>
+                        <a href="#"> Protect PDF</a>
+                    </div>
+                  </div> -->
+                  <div class="dropdown">
+                    <h2 align="center">Convert To</h2>
+                    <select name="" required class="dropbtn">
+                        <span class="arrow"></span>
+                        <option value="" disabled selected hidden>Choose Action </option>
+                        <option value="coffee">Convert To PDF</option>
+                        <option value="tea">Convert To Word</option>
+                        <option value="milk">Convert To JPEG/PNG</option>
+                        <option value="tea">Convert To HTML</option>
+                        <option value="tea">Compress PDF</option>
+                        <option value="tea">Merge PDF</option>
+                        <option value="tea">Organize PDF</option>
+                        <option value="tea">Rotate PDF</option>
+                        <option value="tea">Protect PDF</option>
+                    </select>
+                  </div>
+
+                <div class="uploadbtn">
+                    <button class="start">Start</button>
+                </div>
+            </div>
+        </div>
+        <div class="all-services"> Our Services </div>
+        <div class="flex-container">
+
+            <div class="flex-child magenta">
+              <div class="service-ico"> Icon </div> 
+              <div class="service"> Word to PDF </div> 
+              <div class="service-description"> Convert Doc/Docx files easily to a more readable and device friendly by converting them to PDF </div> 
+            </div>
+            
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div>  
+                <div class="service"> PPT to PDF </div> 
+                <div class="service-description"> Convert Powerpoint files to a nicer format and device friendly by converting them to PDF </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Excel to PDF </div> 
+                <div class="service-description"> Convert Excel files to easily readable document and device friendly by converting them to PDF </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> HTML to PDF</div> 
+                <div class="service-description"> Convert an entire web page to a document very fast </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div>  
+                <div class="service"> PDF to Word</div> 
+                <div class="service-description"> Convert PDF files easily to a Doc/Docx file to enable you edit them easily </div> 
+            </div>
+            
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> PDF to PPT</div> 
+                <div class="service-description"> Convert PDF files easily to a Powerpoint document to enable you edit your slides </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div>  
+                <div class="service"> PDF to Excel </div> 
+                <div class="service-description"> Extract PDF files easily to an Excel data cells to enable you edit and perform arithemetic operation on them </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> PDF to PDF/A </div> 
+                <div class="service-description"> Convert PDF files easily to PDF/A files within seconds </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div>  
+                <div class="service"> Add Page Numbers </div> 
+                <div class="service-description"> Add Page Numbers to your PDF files easily </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Watermark </div> 
+                <div class="service-description"> Add Watermark to your PDF files easily </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Edit PDF </div> 
+                <div class="service-description"> Edit your PDF files to make correction to the content </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Remove Pages </div> 
+                <div class="service-description"> Remove unwanted Pages from your PDF file </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Merge PDF </div> 
+                <div class="service-description"> Merge two or more PDF files together to become one document </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Repair PDF </div> 
+                <div class="service-description"> Repair PDF files that are 0corrupt and cannot open </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Split PDF </div> 
+                <div class="service-description"> Separate one PDF file into two separate PDF files </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Extract PDF </div> 
+                <div class="service-description"> Extract only pages you want from a PDF file easily </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Organize PDF </div> 
+                <div class="service-description"> Organize and rearrange the flow of your PDF file into any desired arrangement </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> PDF Security </div> 
+                <div class="service-description"> Secure your PDF by setting password before it can be opened </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Sign PDF </div> 
+                <div class="service-description"> Sign your PDF to show authenticity and originality  </div> 
+            </div>
+
+            <div class="flex-child green">
+                <div class="service-ico"> Icon </div> 
+                <div class="service"> Unlock PDF </div> 
+                <div class="service-description"> Unlock a password PDF file with just a click </div> 
+            </div>
+
+      <!-- <div class="services"> 
+            <div class="JPG-to-PDF allservices">1</div>
+            <div class="Word-to-PDF allservices">2</div>
+            <div class="Excel-to-PDF allservices">3</div>
+            <div class="HTML-to-PDF allservices">4</div>
+            <div class="PPT-to-PDF allservices">5</div>
+            <div class="PDF-to-JPG allservices">6</div>
+            <div class="PDF-to-Word allservices">7</div>
+            <div class="PDF-to-PPT allservices">8</div>
+            <div class="PDF-to-Excel allservices">9</div>
+            <div class="PDF-to-PDF allservices">10</div>
+            <div class="Rotate-PDF allservices">11</div>
+            <div class="Add-Page-Numbers allservices">12</div>
+        </div> -->
+
+          <!--  <div class="container">
+                <div class="JPG-to-PDF allservices">1</div>
+                <div class="Word-to-PDF allservices">2</div>
+                <div class="Excel-to-PDF allservices">3</div>
+                <div class="HTML-to-PDF allservices">4</div>
+                <div class="PPT-to-PDF allservices">5</div>
+                <div class="PDF-to-JPG allservices">6</div>
+                <div class="PDF-to-Word allservices">7</div>
+                <div class="PDF-to-PPT allservices">8</div>
+                <div class="PDF-to-Excel allservices">9</div>
+                <div class="PDF-to-PDF allservices">10</div>
+                <div class="Rotate-PDF allservices">11</div>
+                <div class="Add-Page-Numbers allservices">12</div>
+            </div>
+      </div> -->
+    </div>
+        <div class="contact">
+            <section class="contact">
+                <div class="content">
+                    <h2>Contact Us</h2>
+                    <p>Below are channels you can reach out to us for a seamless service. </p>
+                </div>
+                <div class="container">
+                    <div class="contactInfo">
+                        <div class="box">
+                            <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+                            <div class="text">
+                                <h3>Address</h3>
+                                <p> 22B POWA Complex,<br>Falomo, Ikoyi,<br>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                            <div class="text">
+                                <h3>Phone</h3>
+                                <p>+234-906-200-0080</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p>fizysystems@gmail.com</p>
+                            </div>
+                        </div>
+                        <h2 class="txt">Connect with us</h2>
+                        <ul class="sci">
+                            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="contactForm">
+                        <form>
+                            <h2>Send Message</h2>
+                            <div class="inputBox">
+                                <input type="text" name="" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputBox">
+                                <textarea required="required"></textarea>
+                                <span>Type your Message...</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </div>
+        
+        <div class="footer">
+                <p>&copy; Fizy Systems 2023 All Rights Reserved</p>
+        </div>
+
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', function(){
+            this.classList.toggle("close");
+        })
+
+
+
+        //selecting all required elements
+
+        const dropArea = document.querySelector(".drag-area"),
+        dragText = dropArea.querySelector("header"),
+        button = dropArea.querySelector("button"),
+        input = dropArea.querySelector("input");
+
+        let file; //this is a global variable and we'll use it inside multiple functions
+
+        button.onclick = () => {
+        input.click(); //if user click on the button then the input also clicked
+        };
+
+        input.addEventListener("change", function () {
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+
+        file = this.files[0];
+
+        dropArea.classList.add("active");
+
+        showFile(); //calling function
+        });
+
+        //If user Drag File Over DropArea
+
+        dropArea.addEventListener("dragover", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+
+        dropArea.classList.add("active");
+
+        dragText.textContent = "Release to Upload File";
+        });
+
+        //If user leave dragged File from DropArea
+
+        dropArea.addEventListener("dragleave", () => {
+        dropArea.classList.remove("active");
+
+        dragText.textContent = "Drag & Drop to Upload File";
+        });
+
+        //If user drop File on DropArea
+
+        dropArea.addEventListener("drop", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+
+        file = event.dataTransfer.files[0];
+
+        showFile(); //calling function
+        });
+
+        function showFile() {
+        let fileType = file.type; //getting selected file type
+
+        let validExtensions = ["image/jpeg", "image/jpg", "image/png", "pdf/pdf"]; //adding some valid image extensions in array
+
+        if (validExtensions.includes(fileType)) {
+            //if user selected file is an image file
+
+            let fileReader = new FileReader(); //creating new FileReader object
+
+            fileReader.onload = () => {
+            let fileURL = fileReader.result; //passing user file source in fileURL variable
+
+            let imgTag = `<img src="${fileURL}" alt="">`; //creating an img tag and passing user selected file source inside src attribute
+
+            dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+            };
+
+            fileReader.readAsDataURL(file);
+        } else {
+            alert("This is not an Image File!");
+
+            dropArea.classList.remove("active");
+
+            dragText.textContent = "Drag & Drop to Upload File";
+        }
+        }
+
+    </script>
+
+</body>
+</html>
